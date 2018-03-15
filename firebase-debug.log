@@ -1,0 +1,174 @@
+[debug] [2018-03-14T09:45:25.408Z] ----------------------------------------------------------------------
+[debug] [2018-03-14T09:45:25.412Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-03-14T09:45:25.412Z] CLI Version:   3.17.6
+[debug] [2018-03-14T09:45:25.412Z] Platform:      darwin
+[debug] [2018-03-14T09:45:25.412Z] Node Version:  v8.10.0
+[debug] [2018-03-14T09:45:25.413Z] Time:          Wed Mar 14 2018 10:45:25 GMT+0100 (CET)
+[debug] [2018-03-14T09:45:25.413Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-03-14T09:45:25.432Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-03-14T09:45:25.432Z] > authorizing via signed-in user
+[debug] [2018-03-14T09:45:25.435Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-03-14T09:45:25.435Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/VmijKF4gFg8mbWkcjw6y_-V94GD4Q80thw-QE4efdsYCgkhoPpuAwDNAxDNWCR9U',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Wed Mar 14 2018 10:45:25 GMT+0100 (CET)
+[debug] [2018-03-14T09:45:25.651Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-14T09:45:25.660Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/testangular-5c901  
+  
+ Wed Mar 14 2018 10:45:25 GMT+0100 (CET)
+[debug] [2018-03-14T09:45:26.489Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-14T09:45:26.490Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/testangular-5c901/tokens  
+  
+ Wed Mar 14 2018 10:45:26 GMT+0100 (CET)
+[debug] [2018-03-14T09:45:27.166Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-14T09:45:27.167Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/testangular-5c901  
+  
+ Wed Mar 14 2018 10:45:27 GMT+0100 (CET)
+[debug] [2018-03-14T09:45:28.075Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/massimomoro/Sites/firebase'...
+[info] 
+[debug] [2018-03-14T09:45:28.077Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/260852687205/clients/_:getWebAppConfig  
+  
+ Wed Mar 14 2018 10:45:28 GMT+0100 (CET)
+[debug] [2018-03-14T09:45:28.787Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
+[debug] [2018-03-14T15:02:42.994Z] ----------------------------------------------------------------------
+[debug] [2018-03-14T15:02:42.996Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-03-14T15:02:42.996Z] CLI Version:   3.17.6
+[debug] [2018-03-14T15:02:42.996Z] Platform:      darwin
+[debug] [2018-03-14T15:02:42.997Z] Node Version:  v8.10.0
+[debug] [2018-03-14T15:02:42.997Z] Time:          Wed Mar 14 2018 16:02:42 GMT+0100 (CET)
+[debug] [2018-03-14T15:02:42.997Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-03-14T15:02:43.025Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-03-14T15:02:43.025Z] > authorizing via signed-in user
+[debug] [2018-03-14T15:02:43.027Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-03-14T15:02:43.027Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/VmijKF4gFg8mbWkcjw6y_-V94GD4Q80thw-QE4efdsYCgkhoPpuAwDNAxDNWCR9U',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Wed Mar 14 2018 16:02:43 GMT+0100 (CET)
+[debug] [2018-03-14T15:02:43.239Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-14T15:02:43.252Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/testangular-5c901  
+  
+ Wed Mar 14 2018 16:02:43 GMT+0100 (CET)
+[debug] [2018-03-14T15:02:44.145Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-14T15:02:44.145Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/testangular-5c901/tokens  
+  
+ Wed Mar 14 2018 16:02:44 GMT+0100 (CET)
+[debug] [2018-03-14T15:02:44.776Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-14T15:02:44.777Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/testangular-5c901  
+  
+ Wed Mar 14 2018 16:02:44 GMT+0100 (CET)
+[debug] [2018-03-14T15:02:45.723Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/massimomoro/Sites/firebase'...
+[info] 
+[debug] [2018-03-14T15:02:45.725Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/260852687205/clients/_:getWebAppConfig  
+  
+ Wed Mar 14 2018 16:02:45 GMT+0100 (CET)
+[debug] [2018-03-14T15:02:46.517Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
+[debug] [2018-03-14T16:36:14.697Z] ----------------------------------------------------------------------
+[debug] [2018-03-14T16:36:14.700Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-03-14T16:36:14.700Z] CLI Version:   3.17.6
+[debug] [2018-03-14T16:36:14.700Z] Platform:      darwin
+[debug] [2018-03-14T16:36:14.700Z] Node Version:  v8.10.0
+[debug] [2018-03-14T16:36:14.701Z] Time:          Wed Mar 14 2018 17:36:14 GMT+0100 (CET)
+[debug] [2018-03-14T16:36:14.701Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-03-14T16:36:14.718Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-03-14T16:36:14.718Z] > authorizing via signed-in user
+[debug] [2018-03-14T16:36:14.721Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-03-14T16:36:14.721Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/VmijKF4gFg8mbWkcjw6y_-V94GD4Q80thw-QE4efdsYCgkhoPpuAwDNAxDNWCR9U',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Wed Mar 14 2018 17:36:14 GMT+0100 (CET)
+[debug] [2018-03-14T16:36:14.962Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-14T16:36:14.970Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/testangular-5c901  
+  
+ Wed Mar 14 2018 17:36:14 GMT+0100 (CET)
+[debug] [2018-03-14T16:36:15.844Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-14T16:36:15.845Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/testangular-5c901/tokens  
+  
+ Wed Mar 14 2018 17:36:15 GMT+0100 (CET)
+[debug] [2018-03-14T16:36:16.537Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-14T16:36:16.538Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/testangular-5c901  
+  
+ Wed Mar 14 2018 17:36:16 GMT+0100 (CET)
+[debug] [2018-03-14T16:36:17.500Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/massimomoro/Sites/firebase'...
+[info] 
+[debug] [2018-03-14T16:36:17.502Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/260852687205/clients/_:getWebAppConfig  
+  
+ Wed Mar 14 2018 17:36:17 GMT+0100 (CET)
+[debug] [2018-03-14T16:36:18.161Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[debug] [2018-03-14T16:36:18.181Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/260852687205/clients/_:getWebAppConfig  
+  
+ Wed Mar 14 2018 17:36:18 GMT+0100 (CET)
+[debug] [2018-03-14T16:36:18.715Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5004
+
+[debug] [2018-03-15T07:53:46.422Z] ----------------------------------------------------------------------
+[debug] [2018-03-15T07:53:46.425Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-03-15T07:53:46.426Z] CLI Version:   3.17.6
+[debug] [2018-03-15T07:53:46.426Z] Platform:      darwin
+[debug] [2018-03-15T07:53:46.426Z] Node Version:  v8.10.0
+[debug] [2018-03-15T07:53:46.426Z] Time:          Thu Mar 15 2018 08:53:46 GMT+0100 (CET)
+[debug] [2018-03-15T07:53:46.426Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-03-15T07:53:46.443Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-03-15T07:53:46.444Z] > authorizing via signed-in user
+[debug] [2018-03-15T07:53:46.446Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-03-15T07:53:46.447Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/VmijKF4gFg8mbWkcjw6y_-V94GD4Q80thw-QE4efdsYCgkhoPpuAwDNAxDNWCR9U',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Thu Mar 15 2018 08:53:46 GMT+0100 (CET)
+[debug] [2018-03-15T07:53:46.668Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-15T07:53:46.675Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/testangular-5c901  
+  
+ Thu Mar 15 2018 08:53:46 GMT+0100 (CET)
+[debug] [2018-03-15T07:53:47.642Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-15T07:53:47.642Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/testangular-5c901/tokens  
+  
+ Thu Mar 15 2018 08:53:47 GMT+0100 (CET)
+[debug] [2018-03-15T07:53:48.358Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-15T07:53:48.359Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/testangular-5c901  
+  
+ Thu Mar 15 2018 08:53:48 GMT+0100 (CET)
+[debug] [2018-03-15T07:53:49.282Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/massimomoro/Sites/firebase'...
+[info] 
+[debug] [2018-03-15T07:53:49.284Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/260852687205/clients/_:getWebAppConfig  
+  
+ Thu Mar 15 2018 08:53:49 GMT+0100 (CET)
+[debug] [2018-03-15T07:53:49.933Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[debug] [2018-03-15T07:53:49.955Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/260852687205/clients/_:getWebAppConfig  
+  
+ Thu Mar 15 2018 08:53:49 GMT+0100 (CET)
+[debug] [2018-03-15T07:53:50.462Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5004
+

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/4.11.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/4.11.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/4.11.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/4.11.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/4.11.0/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    <script defer src="dropzone.js"></script>
+    <link rel="stylesheet" href="basic.css" />
+    <link rel="stylesheet" href="dropzone.css" />
+      <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="contentful.css" />
+  <style>
+    html, body {
+      height: 100%;
+    }
+    #actions {
+      margin: 2em 0;
+    }
+
+
+    /* Mimic table appearance */
+    div.table {
+      display: table;
+    }
+    div.table .file-row {
+      display: table-row;
+    }
+    div.table .file-row > div {
+      display: table-cell;
+      vertical-align: top;
+      border-top: 1px solid #ddd;
+      padding: 8px;
+    }
+    div.table .file-row:nth-child(odd) {
+      background: #f9f9f9;
+    }
+
+
+
+    /* The total progress gets shown by event listeners */
+    #total-progress {
+      opacity: 0;
+      transition: opacity 0.3s linear;
+    }
+
+    /* Hide the progress bar when finished */
+    #previews .file-row.dz-success .progress {
+      opacity: 0;
+      transition: opacity 0.3s linear;
+    }
+
+    /* Hide the delete button initially */
+    #previews .file-row .delete {
+      display: none;
+    }
+
+    /* Hide the start and cancel buttons and show the delete button */
+
+    #previews .file-row.dz-success .start,
+    #previews .file-row.dz-success .cancel {
+      display: none;
+    }
+    #previews .file-row.dz-success .delete {
+      display: block;
+    }
+
+
+  </style>
+  
+  </head>
+  <body>
+      <div class="container" id="container">
+      <div id="actions" class="row">
+
+          <div class="col-lg-7">
+            <!-- The fileinput-button span is used to style the file input field as button -->
+            <span class="btn btn-success fileinput-button">
+                <i class="glyphicon glyphicon-plus"></i>
+                <span>Add files...</span>
+            </span>
+            <button type="submit" class="btn btn-primary start">
+                <i class="glyphicon glyphicon-upload"></i>
+                <span>Start upload</span>
+            </button>
+            <button type="reset" class="btn btn-warning cancel">
+                <i class="glyphicon glyphicon-ban-circle"></i>
+                <span>Cancel upload</span>
+            </button>
+          </div>
+    
+          <div class="col-lg-5">
+            <!-- The global file processing state -->
+            <span class="fileupload-process">
+              <div id="total-progress" class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
+              </div>
+            </span>
+          </div>
+    
+          <div class="table table-striped" class="files" id="previews">
+              <div id="template" class="file-row">
+            <!-- This is used as the file preview template -->
+                <div>
+                    <span class="preview"><img data-dz-thumbnail /></span>
+                </div>
+                <div>
+                    <p class="name" data-dz-name></p>
+                    <strong class="error text-danger" data-dz-errormessage></strong>
+                </div>
+                <div>
+                    <p class="size" data-dz-size></p>
+                    <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                      <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
+                    </div>
+                </div>
+                <div>
+                  <button class="btn btn-primary start">
+                      <i class="glyphicon glyphicon-upload"></i>
+                      <span>Start</span>
+                  </button>
+                  <button data-dz-remove class="btn btn-warning cancel">
+                      <i class="glyphicon glyphicon-ban-circle"></i>
+                      <span>Cancel</span>
+                  </button>
+                  <button data-dz-remove class="btn btn-danger delete">
+                    <i class="glyphicon glyphicon-trash"></i>
+                    <span>Delete</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+  
+    <hr>
+    </div>
+    <img id="imgUpload" src="" width="100vw">
+    <div class="row">
+        <div class="row__col row__col--xl-6 row__col--l-7 row__col--m-8 row__col--xl-centered row__col--l-centered row__col--m-centered">
+            <div class="account__box box">
+            <form id="login-form" class="form account__form" action="/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="oqeRACfbOEh5pm+5zJpMqE/VVyMe5hsP6Qcyo92m8zGECaU9fBr+Ie350B9vp/y4wGdTnRBGHjmXXTYhHKD5FA=="><div id="flash"><span class="notice">Your account was successfully confirmed. You are now signed in.</span></div>
+            <div class="form__item">
+            <label class="label form__label" for="user_email">Email</label>
+            <input class="required form__input input" autofocus="autofocus" type="text" name="user[email]" id="user_email">
+            </div>
+            <div class="form__item">
+            <label class="label form__label" for="user_password">Password</label>
+            <input class="required form__input input" type="password" name="user[password]" id="user_password">
+            </div>
+            <div class="form__item">
+            <input type="checkbox" name="remember_me" id="remember_me" value="{:name=>&quot;user[remember_me]&quot;}">
+            <label class="form__label label label--inline" for="remember_me">
+            Remember me
+            </label>
+            </div>
+            <input type="submit" name="commit" value="Log in" class="btn btn--large btn--expanded btn--blue" data-disable-with="Log in">
+            </form><div class="account__buttons">
+            <div class="account__divider uppercase">
+            <div class="account__divider-text">
+            Or log in with
+            </div>
+            </div>
+            <div class="row row--lessgutter">
+            <div class="row__col row__col--m-4">
+            <a class="auth_provider btn btn--small btn--github" href="https://be.contentful.com/account/profile/auth/github"><img src="//static.contentful.com/gatekeeper/oauth/github-42b427bfd71f1f689a4b19f697e456b1cc94529c3bb2ba129c62526bca3e3e8f.svg" alt="Github" width="24" height="24"><span class="auth_provider_name">Github</span></a>
+            </div>
+            <div class="row__col row__col--m-4">
+            <a class="auth_provider btn btn--small btn--google" href="https://be.contentful.com/account/profile/auth/google_oauth2"><img src="//static.contentful.com/gatekeeper/oauth/google-030450bbdb2dac02a12c48c5b1054bf79be8dc26c3910128bc4464056ce90675.svg" alt="Google" width="24" height="24"><span class="auth_provider_name">Google</span></a>
+            </div>
+            <div class="row__col row__col--m-4">
+            <a class="auth_provider btn btn--small btn--twitter" href="https://be.contentful.com/account/profile/auth/twitter"><img src="//static.contentful.com/gatekeeper/oauth/twitter-8829252e140fbee476c4222a1284b4d27f139917550f21502677c229dec68a2c.svg" alt="Twitter" width="24" height="24"><span class="auth_provider_name">Twitter</span></a>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div class="account__meta footer_links">
+            <a class="a" href="/login/sso">Log in via SSO</a>
+            <span>|</span>
+            <a class="a" href="/password/new">Reset password</a>
+            <span>|</span>
+            <a class="a" href="/confirmation/new/resend">Resend confirmation</a>
+            <span>|</span>
+            <a class="a" href="/unlock/new">Unlock account</a>
+            
+            </div>
+            </div>
+    <div id="login_div" class="main-div">
+      <h3>Log In</h3>
+      <input type="email" placeholder="Email..." id="email_field"/>
+      <input type="password" placeholder="Password..." id="password_field"/>
+      <button onclick="googleLogin()">Login with Google</button>
+    </div>
+    </div>
+    
+    <div id="user_div" class="loggedin-div">
+      <h3>Benvenuto</h3>
+      <p id="user_para"></p>
+      <button onclick="logout()">Logout</button>
+    </div>
+    <pre id="object"></pre>
+    
+    <script src="app.js"></script>
+  
+  </body>
+</html>
